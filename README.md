@@ -2,7 +2,7 @@
 
 ## 🌐 Benchmark Webpage
 
-The benchmark results can be viewed at: [https://fzjcdt.github.io/FastAT_Banchmark/benchmark.html](https://fzjcdt.github.io/FastAT_Banchmark/benchmark.html)
+The benchmark results can be viewed at: [https://fzjcdt.github.io/FastAT_Benchmark/benchmark.html](https://fzjcdt.github.io/FastAT_Benchmark/benchmark.html)
 
 ## 🚀 Overview
 
