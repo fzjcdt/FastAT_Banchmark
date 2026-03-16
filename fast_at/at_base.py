@@ -80,7 +80,8 @@ class ATBase(object):
         else:
             model = model_to_test
         
-        tester = AttackTester(model, self.device, eps=self.eps, log_dir=self.output_dir)
+        class_num = self.config.get('class_num')
+        tester = AttackTester(model, self.device, eps=self.eps, log_dir=self.output_dir, class_num=class_num)
         
         attack_results = {}
         try:

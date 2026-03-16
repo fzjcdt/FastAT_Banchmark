@@ -7,3 +7,4 @@ train_size: 98000
 val_size: 2000
 eps: 8.0/255
 log_dir: ./log/tiny-imagenet
+class_num: 200

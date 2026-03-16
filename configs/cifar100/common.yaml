@@ -7,3 +7,4 @@ train_size: 49000
 val_size: 1000
 eps: 8.0/255
 log_dir: ./log/cifar100
+class_num: 100

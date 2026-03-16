@@ -1,16 +1,18 @@
 import os
 import torch
+import numpy as np
 from torchattacks import PGD
 from autoattack import AutoAttack
 from attacks import CRAttack
 
 
 class AttackTester:
-    def __init__(self, model, device, eps=8.0 / 255, log_dir=None):
+    def __init__(self, model, device, eps=8.0 / 255, log_dir=None, class_num=None):
         self.model = model
         self.device = device
         self.eps = eps
         self.log_dir = log_dir
+        self.class_num = class_num
 
     def test_pgd(self, test_loader, steps_list=None):
         if steps_list is None:
@@ -75,7 +77,8 @@ class AttackTester:
     def test_cr_attack(self, test_loader):
         self.model.eval()
         log_path = os.path.join(self.log_dir, 'cr_attack.log') if self.log_dir else None
-        attacker = CRAttack(self.model, eps=self.eps, log_path=log_path)
+        target_numbers = int(np.ceil(np.log(self.class_num))) if self.class_num else 3
+        attacker = CRAttack(self.model, eps=self.eps, log_path=log_path, target_numbers=target_numbers)
         
         X, y = [], []
         for images, labels in test_loader:
