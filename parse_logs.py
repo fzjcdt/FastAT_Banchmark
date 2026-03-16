@@ -122,7 +122,7 @@ def find_all_seeds(base_path):
 
 def main():
     log_base = Path('log')
-    datasets = ['cifar10', 'cifar100', 'tiny_imagenet']
+    datasets = ['cifar10', 'cifar100', 'tiny-imagenet']
     
     all_data = {}
     
