@@ -1450,4 +1450,4 @@ PGD test results:
 AutoAttack results:
   autoattack_acc: 0.2013
 CR-Attack results:
-  cr_attack_acc: 0.2009
+  cr_attack_acc: 0.2003
